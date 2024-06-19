@@ -1,0 +1,61 @@
+/* Contenedor principal */
+.cover-container {
+  display: flex;
+  align-items: flex-start;
+}
+
+/* Estilos para la imagen */
+.cover-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Estilos para el título */
+.title {
+  color: #7b1fa2;
+  font-size: 2.5rem;
+}
+
+/* Ajustes para el formulario */
+.game-form {
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Estilos para los mensajes de error */
+.error-message {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+/* Estilos para el botón de enviar */
+.btn-primary {
+  margin-top: 10px;
+}
+
+button {
+  background-color: #7b1fa2;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #9c27b0;
+}
+
+.cancel-button{
+  margin-left:10px;
+}
+
+.title {
+  color: #7b1fa2;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+ text-align: center;
+}

@@ -1,0 +1,22 @@
+<div class="login-container">
+  <div class="content">
+    <img src="../../../assets/images/logo.png" alt="Logo" class="logo">
+    <h1 class="main-title">My VideoGame List</h1>
+    <form (ngSubmit)="login($event)">
+      <div class="form-group">
+        <label for="username" class="form-label">Nombre de usuario:</label>
+        <input type="text" id="username" name="username" class="form-control" placeholder="Usuario" required
+               [(ngModel)]="userData.username">
+      </div>
+      <div class="form-group">
+        <label for="password" class="form-label">Contraseña:</label>
+        <input type="password" id="password" name="password" class="form-control" placeholder="Contraseña" required
+               [(ngModel)]="userData.password">
+      </div>
+      <div *ngIf="errorMessage" class="text-danger">{{ errorMessage }}</div>
+      <button type="submit" class="btn btn-primary" [disabled]="isLoading">Iniciar sesión</button>
+      <div *ngIf="isLoading" class="spinner"></div>
+    </form>
+    <p>¿No tienes una cuenta? Regístrate <a href="/register">aquí</a></p>
+  </div>
+</div>

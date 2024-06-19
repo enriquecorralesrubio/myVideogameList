@@ -1,0 +1,105 @@
+/* Container */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f8f9fa;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+/* Form */
+form {
+  width: 100%;
+  max-width: 400px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Main Title */
+.main-title {
+  color: #7b1fa2;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Sub Title */
+.sub-title {
+  text-align: center;
+  color: #7b1fa2;
+  margin-bottom: 1.5rem;
+}
+
+/* Form Labels */
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #495057;
+}
+
+/* Form Controls */
+.form-control {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+/* Button */
+.btn-primary {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  color: white;
+  background-color: #7b1fa2;
+  border: none;
+  border-radius: 5px;
+}
+
+.btn-primary:hover {
+  background-color: #5a0e7a;
+}
+
+/* Error message */
+.text-danger {
+  color: #dc3545;
+  margin-bottom: 1rem;
+}
+
+/* Registration link */
+p {
+  margin-top: 1rem;
+  color: #6c757d;
+}
+
+a {
+  color: #7b1fa2;
+}
+
+a:hover {
+  color: #5a0e7a;
+  text-decoration: none;
+}
+
+.content {
+  width: 100%;
+  max-width: 400px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.logo {
+  display: block;
+  margin: 0 auto;
+  max-width: 150px;
+}

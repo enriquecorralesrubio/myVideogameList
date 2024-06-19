@@ -1,0 +1,63 @@
+<app-admin-header></app-admin-header>
+
+<div *ngIf="isLoading" class="text-center mt-5">
+  <div class="spinner-admin text-primary" role="status">
+    <span class="visually-hidden">Cargando...</span>
+  </div>
+  <p class="mt-2">Cargando...</p>
+</div>
+
+<div *ngIf="!isLoading" class="container mt-5">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" class="game-form">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group mb-3">
+          <label for="title">Nombre del juego</label>
+          <input id="title" formControlName="title" type="text" class="form-control">
+          <div *ngIf="form.get('title')?.invalid && form.get('title')?.touched" class="error-message text-danger mt-1">
+            Debes proporcionar el nombre del juego.
+          </div>
+        </div>
+        <div class="form-group mb-3">
+          <label for="genres">Géneros</label>
+          <select id="genres" formControlName="genres" multiple class="form-control">
+            <option *ngFor="let genre of genres" [value]="genre.uuid">{{ genre.name }}</option>
+          </select>
+        </div>
+        <div class="form-group mb-3">
+          <label for="platforms">Plataformas</label>
+          <select id="platforms" formControlName="platforms" multiple class="form-control">
+            <option *ngFor="let platform of platforms" [value]="platform.uuid">{{ platform.name }}</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="form-group mb-3">
+          <label for="developer">Desarrolladora</label>
+          <input id="developer" formControlName="developer" type="text" class="form-control">
+          <div *ngIf="form.get('developer')?.invalid && form.get('developer')?.touched" class="error-message text-danger mt-1">
+            Debes proporcionar la desarrolladora.
+          </div>
+        </div>
+        <div class="form-group mb-3">
+          <label for="cover">Enlace a portada</label>
+          <input id="cover" formControlName="cover" type="text" class="form-control">
+          <div *ngIf="form.get('cover')?.invalid && form.get('cover')?.touched" class="error-message text-danger mt-1">
+            Debes proporcionar un enlace válido para la portada.
+          </div>
+        </div>
+        <div class="form-group mb-3">
+          <label for="synopsis">Sinopsis</label>
+          <textarea id="synopsis" formControlName="synopsis" rows="3" class="form-control"></textarea>
+          <div *ngIf="form.get('synopsis')?.invalid && form.get('synopsis')?.touched" class="error-message text-danger mt-1">
+            Indica la sinopsis del juego.
+          </div>
+        </div>
+        <div>
+        <button type="submit" class="btn btn-primary">Añadir</button>
+      </div>
+      </div>
+    </div>
+  </form>
+</div>

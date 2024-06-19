@@ -1,0 +1,118 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h2 {
+  color: #084f8d;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Select y Input de búsqueda */
+.form-select, .form-control {
+  max-width: 400px;
+  margin: 0 auto;
+  display: block;
+  border: 1px solid #084f8d;
+  border-radius: 5px;
+}
+
+/* Tabla */
+.table {
+  margin-top: 20px;
+}
+
+.table td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.table thead th {
+  background-color: #084f8d;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.table-hover tbody tr:hover {
+  background-color: #f3e5f5;
+}
+
+/* Imágenes de carátula */
+.cover-image {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+/* Estilos para los botones */
+button {
+  background-color: #084f8d;
+  color: white;
+  border-radius: 3px;
+  border: none;
+  padding: 8px 16px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #032c69;
+}
+
+
+.text-center {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Select y Input de búsqueda */
+.form-select, .form-control {
+  max-width: 400px;
+  margin: 0 auto;
+  display: block;
+  border: 1px solid #084f8d;
+  border-radius: 5px;
+}
+
+.form-select:focus, .form-control:focus {
+  border-color: #032c69;
+  box-shadow: 0 0 5px rgba(156, 39, 176, 0.5);
+}
+
+
+//Paginación//
+.custom-pagination-admin .ngx-pagination {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+.custom-pagination-admin .ngx-pagination li.current {
+  background-color: #084f8d;
+  color: white;
+  border-color: #084f8d;
+  padding: 0.5rem 0.75rem;
+  margin: 0 0.25rem;
+  border-radius: 4px;
+}
+
+
+
+.custom-pagination-admin .ngx-pagination li a {
+  color: #084f8d;
+  border: 1px solid #084f8d;
+  padding: 0.5rem 0.75rem;
+  margin: 0 0.25rem;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.custom-pagination-admin .ngx-pagination li a:hover {
+  background-color: #032c69;
+  color: white;
+}
+
+.custom-pagination-admin .ngx-pagination li a:disabled {
+  color: #ccc;
+  border-color: #ccc;
+}

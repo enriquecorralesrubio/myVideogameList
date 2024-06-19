@@ -1,0 +1,70 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+h2 {
+  color: #7b1fa2;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Select y Input de búsqueda */
+.form-select, .form-control {
+  max-width: 400px;
+  margin: 0 auto;
+  display: block;
+  border: 1px solid #7b1fa2;
+  border-radius: 5px;
+}
+
+.form-select:focus, .form-control:focus {
+  border-color: #9c27b0;
+  box-shadow: 0 0 5px rgba(156, 39, 176, 0.5);
+}
+
+/* Tabla */
+.table {
+  margin-top: 20px;
+}
+
+.table td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.table thead th {
+  background-color: #7b1fa2;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.table-hover tbody tr:hover {
+  background-color: #f3e5f5;
+}
+
+/* Imágenes de carátula */
+.cover-image {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+/* Enlaces */
+.details-link, .add-link {
+  color: #7b1fa2;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.details-link:hover, .add-link:hover {
+  color: #9c27b0;
+}
+
+.text-center {
+  text-align: center;
+  margin-top: 20px;
+}
+
+

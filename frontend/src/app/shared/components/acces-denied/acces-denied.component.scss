@@ -1,0 +1,28 @@
+.access-denied-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.title {
+  font-size: 30px;
+  color: #7b1fa2;
+}
+
+.denied{
+  font-size: 24px;
+  color: #dc3545;
+}
+
+.access-denied-container a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #7b1fa2;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.access-denied-container a:hover {
+  background-color: #5a0e7a;
+}

@@ -1,0 +1,28 @@
+.error-container {
+  text-align: center;
+  margin-top: 50px;
+
+  h1 {
+    font-size: 3em;
+    color: #ff0000;
+  }
+
+  p {
+    font-size: 1.5em;
+  }
+
+
+  button {
+    background-color: #7b1fa2;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  button:hover {
+    background-color: #9c27b0;
+  }
+}

@@ -1,0 +1,35 @@
+.container {
+  margin: 50px auto;
+  max-width: 800px;
+  padding: 20px;
+  background-color: rgba(147, 112, 219, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  color: #7b1fa2;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.cover-image {
+  display: block;
+  margin: 0 auto 20px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.text {
+  color: #333;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
+.purple {
+  color: #7b1fa2;
+  font-size: 1.2em;
+  font-weight: bold;
+}

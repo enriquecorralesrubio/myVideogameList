@@ -1,0 +1,19 @@
+networks:
+  dev:
+    driver: bridge
+    external: true
+
+services:
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: angular_node
+    ports:
+      - ${FRONTEND_PORT}:4200
+    volumes:
+      - .:/project
+      - /project/node_modules
+    networks:
+      - dev

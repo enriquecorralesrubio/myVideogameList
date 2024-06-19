@@ -1,0 +1,32 @@
+.error-message {
+  font-size: 0.875em;
+}
+
+.game-form .form-group {
+  margin-bottom: 1rem;
+}
+
+.game-form .form-control {
+  padding: 0.5rem;
+}
+
+.game-form .btn {
+  margin-top: 1rem;
+}
+
+.btn-primary {
+  margin-top: 10px;
+}
+
+button {
+  background-color: #084f8d;
+  color: white;
+  border-radius: 3px;
+  border: none;
+  padding: 8px 16px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #032c69;
+}

@@ -1,0 +1,72 @@
+/* Estilos del header */
+header {
+  background: linear-gradient(45deg, #7b1fa2, #9c27b0);
+  color: #fff;
+  padding: 10px 0;
+}
+
+/* Estilos de la navbar */
+.custom-navbar {
+  background: transparent;
+}
+
+.custom-navbar .navbar-brand {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding-left: 15px;
+  transition: color 0.3s ease;
+}
+
+.custom-navbar .navbar-brand:hover {
+  color: #d1c4e9;
+}
+
+.custom-navbar .navbar-nav .nav-item .nav-link {
+  color: #fff;
+  margin-right: 15px;
+  font-weight: 500;
+}
+
+.custom-navbar .navbar-nav .nav-item .nav-link:hover {
+  color: #d1c4e9;
+}
+
+.custom-navbar .navbar-nav .nav-item.active .nav-link {
+  font-weight: bold;
+}
+
+.custom-navbar .navbar-collapse {
+  justify-content: flex-end;
+}
+
+.custom-navbar .nav-item {
+  display: flex;
+  align-items: center;
+}
+
+.custom-navbar .nav-item .nav-link {
+  padding: 5px 10px;
+}
+
+.custom-navbar .nav-item .nav-link.pointer:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .custom-navbar .navbar-brand {
+    font-size: 1.2rem;
+  }
+
+  .custom-navbar .navbar-nav .nav-item .nav-link {
+    margin-right: 10px;
+  }
+}
+
+.logo {
+  display: block;
+  max-width: 90px;
+  margin-left: 15px;
+}

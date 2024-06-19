@@ -1,0 +1,24 @@
+<app-header></app-header>
+
+<div *ngIf="isLoading" class="text-center mt-5">
+  <div class="spinner"></div>
+  <p>Cargando detalles del juego...</p>
+</div>
+
+<div class="container" *ngIf="!isLoading && gameDetails">
+  <div class="row">
+    <div class="col-md-6">
+      <img [src]="gameDetails.cover" alt="{{ gameDetails.title }}" class="cover-image">
+    </div>
+    <div class="col-md-6">
+      <h1 class="title">{{ gameDetails.title }}</h1>
+      <p class="text"><span class="purple">Nota media:</span> {{ gameDetails.globalRating ? gameDetails.globalRating : '-' }}</p>
+      <p class="text"><span class="purple">Desarrolladora:</span> {{ gameDetails.developer }}</p>
+      <p class="text"><span class="purple">Plataformas:</span> <span>{{ getPlatformNames(gameDetails.platforms) }}</span></p>
+      <p class="text"><span class="purple">Géneros:</span> <span>{{ getGenreNames(gameDetails.genres) }}</span></p>
+      <p class="text"><span class="purple">Sinopsis:</span> {{ gameDetails.synopsis }}</p>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

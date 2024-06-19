@@ -1,0 +1,70 @@
+<app-header></app-header>
+
+<div *ngIf="isLoading" class="text-center mt-5">
+  <div class="spinner"></div>
+  <p>Cargando lista de videojuegos...</p>
+</div>
+
+<div *ngIf="!isLoading">
+  <div class="d-flex justify-content-center align-items-center mt-3 flex-wrap">
+    <div class="form-group mx-4">
+      <label for="sortSelect">Ordenar por:</label>
+      <select id="sortSelect" (change)="sortByOption($event)" class="form-select">
+        <option value="name">Nombre</option>
+        <option value="rating">Valoración</option>
+        <option value="state">Estado</option>
+      </select>
+    </div>
+
+    <div class="form-group mx-3">
+      <label for="searchInput">Buscar por nombre:</label>
+      <input id="searchInput" type="text" [(ngModel)]="searchTerm" (input)="onSearchChange()" placeholder="Buscar..." class="form-control" />
+    </div>
+  </div>
+
+
+  <div class="container" *ngIf="games">
+    <h3 class="title">Mis juegos</h3>
+    <div class="row">
+      <div *ngFor="let game of filteredGames | paginate: { itemsPerPage:8, currentPage: page }" class="col-md-6 mb-3">
+        <div class="card horizontal-card">
+          <div class="row">
+            <div class="col-md-6 game-cover">
+              <img [src]="game.cover" class="card-img" alt="{{game.cover}}">
+            </div>
+            <div class="col-md-6">
+              <div class="card-body">
+                <h4 class="card-title">{{ game.gameName }}</h4>
+                <div class="card-text">
+                  <p>Valoración: <span class="user-rating">{{ game.userRating !== -1 ? game.userRating : '_' }}</span></p>
+                  <p>Estado:<span class="text-yellow"> {{ game.state }}</span></p>
+                  <p *ngIf="game.timePlayed !== null">Tiempo jugado:<span class="text-yellow"> {{ game.timePlayed }} horas</span></p>
+                  <p *ngIf="game.timePlayed === null">Tiempo jugado:<span class="text-yellow"> no se ha indicado.</span></p>
+                </div>
+                <div class="buttons">
+                  <button class="btn btn-primary btn-edit" (click)="openEditForm(game)">Editar</button>
+                  <button class="btn btn-danger btn-delete" (click)="removeGame(game.gameUuid, game.gameName)">Eliminar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+<div class="d-flex justify-content-end mt-3">
+  <pagination-controls class="custom-pagination"
+                       (pageChange)="page = $event"
+                       previousLabel="Anterior"
+                       nextLabel="Siguiente">
+  </pagination-controls>
+</div>
+
+</div>
+<app-footer></app-footer>

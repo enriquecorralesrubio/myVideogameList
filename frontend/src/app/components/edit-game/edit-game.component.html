@@ -1,0 +1,62 @@
+<app-header></app-header>
+<div *ngIf="isLoadingForm" class="text-center mt-5">
+  <div class="spinner"></div>
+  <p>Cargando formulario...</p>
+</div>
+
+<div class="row justify-content-center">
+
+  <div class="col-md-3 cover-container mb-4 mt-4">
+    <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+    <img [src]="editData?.cover" alt="{{editData?.cover}}" class="cover-image">
+  </div>
+
+  <div class="col-md-3 mb-4 mt-4">
+    <div class="title-container">
+      <h1 class="title">{{ editData?.gameName }}</h1>
+    </div>
+
+    <form [formGroup]="form" (ngSubmit)="submitEdit()" class="game-form" *ngIf="editData">
+      <div class="form-group">
+        <label for="userRating">Nota</label>
+        <select id="userRating" formControlName="userRating" class="form-control">
+          <option value="-1">Sin valoración</option>
+          <option *ngFor="let rating of ratings" [value]="rating">{{ rating }}</option>
+        </select>
+        <div *ngIf="form.get('userRating')?.invalid && form.get('userRating')?.touched" class="error-message">
+          Debes seleccionar una nota válida.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="timePlayed">Tiempo jugado (horas)</label>
+        <input id="timePlayed" formControlName="timePlayed" type="number" class="form-control">
+        <div *ngIf="form.get('timePlayed')?.invalid && form.get('timePlayed')?.touched" class="error-message">
+          El tiempo jugado debe ser mayor o igual a cero.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="state">Estado</label>
+        <select id="state" formControlName="state" class="form-control">
+          <option value="pendiente">Pendiente</option>
+          <option value="finalizado">Finalizado</option>
+          <option value="jugando">Jugando</option>
+          <option value="deseado">Deseado</option>
+        </select>
+        <div *ngIf="form.get('state')?.invalid && form.get('state')?.touched" class="error-message">
+          Debes seleccionar un estado válido.
+        </div>
+      </div>
+
+      <div class="form-group d-flex">
+        <button type="submit" class="btn btn-primary">Guardar</button>
+        <button type="button" class="btn btn-primary cancel-button"  (click)="cancelEdit()">Cancelar</button>
+      </div>
+      <div *ngIf="isLoading" class="spinner"></div>
+    </form>
+
+  </div>
+
+</div>
+<app-footer></app-footer>

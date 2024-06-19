@@ -1,0 +1,36 @@
+@startuml
+
+class Users {
+    + ID: int
+    + Username: string
+    + Password: string
+    + Email: string
+}
+
+class VideoGames {
+    + ID: int
+    + Name: string
+    + Platforms: string[]  
+    + Genre: string
+    + Developer: string
+}
+
+enum State {
+    completed
+    pending
+    playing
+}
+
+class GameList {
+    + ID: int
+    + User_ID: int
+    + VideoGame_ID: int
+    + State: State   
+    + Rating: int      
+    + TimeToComplete: int 
+}
+
+Users "1" -- "1" GameList
+GameList "0..*" -- "0..*" VideoGames : Contains
+
+@enduml

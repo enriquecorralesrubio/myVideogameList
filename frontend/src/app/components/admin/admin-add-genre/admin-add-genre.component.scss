@@ -1,0 +1,64 @@
+.error-message {
+  font-size: 0.875em;
+}
+
+.game-form .form-group {
+  margin-bottom: 1rem;
+}
+
+.game-form .form-control {
+  padding: 0.5rem;
+}
+
+.game-form .btn {
+  margin-top: 1rem;
+}
+
+.container {
+  max-width: 800px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem;
+}
+
+.mt-5 {
+  margin-top: 3rem;
+}
+
+button {
+
+  color: white;
+  border-radius: 3px;
+  border: none;
+  padding: 8px 16px;
+  transition: background-color 0.3s;
+}
+
+.title{
+  color: #084f8d;
+}
+
+.title-danger{
+  color:#b71212;
+}
+
+.btn-danger{
+  background-color: #b71212;
+}
+
+.btn-primary{
+  background-color: #084f8d;
+}
+
+.btn-primary:hover {
+  background-color: #032c69;
+}
+
+.btn-danger:hover {
+  background-color: #5e0303;
+}

@@ -1,0 +1,75 @@
+<app-admin-header></app-admin-header>
+
+<div *ngIf="isLoadingForm" class="text-center mt-5">
+  <div class="spinner-admin"></div>
+  <p>Cargando...</p>
+</div>
+
+<div class="title-container">
+  <h1 class="title">{{ editData?.title }}</h1>
+</div>
+
+<form [formGroup]="form" (ngSubmit)="submitEdit()" class="game-form" *ngIf="editData">
+  <div class="row justify-content-center">
+    <div class="col-md-3 cover-container mb-4 mt-4">
+      <img [src]="editData.cover" alt="{{editData.cover}}" class="cover-image">
+    </div>
+
+    <div class="col-md-3 mb-4 mt-4">
+      <div class="form-group">
+        <label for="title">Nombre del juego</label>
+        <input id="title" formControlName="title" type="text" class="form-control">
+        <div *ngIf="form.get('title')?.invalid && form.get('title')?.touched" class="error-message">
+          Debes proporcionar un nombre válido.
+        </div>
+      </div>
+      <div class="form-group label-margin">
+        <label for="cover">Enlace a Portada</label>
+        <input id="cover" formControlName="cover" type="text" class="form-control">
+        <div *ngIf="form.get('cover')?.invalid && form.get('cover')?.touched" class="error-message">
+          Debes proporcionar un enlace válido.
+        </div>
+      </div>
+      <div class="form-group label-margin">
+        <label for="developer">Desarrolladora</label>
+        <input id="developer" formControlName="developer" type="text" class="form-control">
+        <div *ngIf="form.get('developer')?.invalid && form.get('developer')?.touched" class="error-message">
+          Debes proporcionar una desarrolladora válida.
+        </div>
+      </div>
+      <div class="form-group label-margin">
+        <div *ngIf="form.get('genres')?.invalid && form.get('genres')?.touched" class="error-message">
+          Debes seleccionar algún género.
+        </div>
+        <label for="genres">Géneros</label>
+        <select id="genres" formControlName="genres" multiple class="form-control">
+          <option *ngFor="let genre of genres" [value]="genre.uuid">{{ genre.name }}</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="col-md-3 mb-4 mt-4">
+      <div class="form-group label-margin">
+        <div *ngIf="form.get('platforms')?.invalid && form.get('platforms')?.touched" class="error-message">
+          Debes seleccionar alguna plataforma.
+        </div>
+        <label for="platforms">Plataformas</label>
+        <select id="platforms" formControlName="platforms" multiple class="form-control">
+          <option *ngFor="let platform of platforms" [value]="platform.uuid">{{ platform.name }}</option>
+        </select>
+      </div>
+      <div class="form-group label-margin">
+        <label for="synopsis">Sinopsis</label>
+        <textarea id="synopsis" formControlName="synopsis" style="height: 150px;" class="form-control"></textarea>
+        <div *ngIf="form.get('synopsis')?.invalid && form.get('synopsis')?.touched" class="error-message">
+          Indica la sinopsis del juego.
+        </div>
+      </div>
+      <div class="form-group d-flex">
+        <button type="submit" class="btn btn-primary">Guardar</button>
+        <button type="button" class="btn btn-primary cancel-button" (click)="cancelEdit()">Cancelar</button>
+      </div>
+      <div *ngIf="isLoading" class="spinner-admin"></div>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,33 @@
+<app-admin-header></app-admin-header>
+
+<div *ngIf="isLoading" class="text-center mt-5">
+  <div class="spinner-admin"></div>
+  <p>Cargando...</p>
+</div>
+
+<div *ngIf="!isLoading" class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-5 col-lg-4">
+      <h3 class="text-center mb-4 title">Añadir plataforma</h3>
+      <form [formGroup]="form" (ngSubmit)="onSubmit()" class="game-form">
+        <div class="form-group mb-3">
+          <label for="name">Nombre de la plataforma</label>
+          <input id="name" formControlName="name" type="text" class="form-control">
+          <div *ngIf="form.get('name')?.invalid && form.get('name')?.touched" class="error-message text-danger mt-1">
+            Debes proporcionar el nombre de la plataforma.
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Añadir</button>
+      </form>
+    </div>
+    <div class="col-md-5 col-lg-4">
+      <h3 class="text-center mb-4 title-danger">Eliminar plataforma</h3>
+      <ul class="list-group">
+        <li *ngFor="let platform of platforms" class="list-group-item d-flex justify-content-between align-items-center">
+          {{ platform.name }}
+          <button class="btn btn-danger btn-sm" (click)="removePlatform(platform.uuid)">Eliminar</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

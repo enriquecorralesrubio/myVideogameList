@@ -1,0 +1,48 @@
+@startuml
+left to right direction
+
+actor User as U
+actor Admin
+
+rectangle "Video Game Management" {
+    usecase "Search Video Game" as UC1
+    usecase "Add Video Game" as UC2
+    usecase "Modify Video Game" as UC3
+    usecase "Delete Video Game" as UC4
+}
+
+rectangle "Manage User's Game List" {
+    usecase "Add Game to List" as UC5
+    usecase "Remove Game from List" as UC6
+}
+
+rectangle "User Authentication" {
+    usecase "User Login" as UC7
+    usecase "User Logout" as UC8
+}
+
+rectangle "Admin Authentication" {
+    usecase "Admin Login" as UC9
+    usecase "Admin Logout" as UC10
+}
+
+rectangle "View Information" {
+    usecase "View Game List" as UC11
+    usecase "View Game Details" as UC12
+    usecase "View Game Ranking" as UC13
+}
+
+U -- UC1
+U -- UC5
+U -- UC6
+U -- UC7
+U -- UC8
+U -- UC11
+U -- UC12
+U -- UC13
+Admin -- UC2
+Admin -- UC3
+Admin -- UC4
+Admin -- UC9
+Admin -- UC10
+@enduml
