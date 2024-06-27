@@ -116,9 +116,33 @@ A form will open where you can change what you want and update it in your list.
 
 ## Admin Panel
 ---
-If you log in as an admin, you will see a different page. The game list still appears, but now you can add, edit, and delete games from the database, as well as add or delete genres and platforms.
+If we log in as an administrator, we will see a different page. The list of games will still appear, but now we can add, edit, and delete games from the database, as well as add or delete genres and platforms. All of this can be done with their respective forms.
 
-You just need to fill out the various forms as needed.
+![image](./screenshots/Screenshot_17.jpg)
+
+### Add Videogame to the Database
+---
+
+![image](./screenshots/Screenshot_18.jpg)
+
+### Add or delete Genre from the Database
+---
+![image](./screenshots/Screenshot_19.jpg)
+
+### Add or delete Platform from the Database
+---
+![image](./screenshots/Screenshot_20.jpg)
+
+### Edit Videogame in the Database
+---
+
+When selecting a videogame to edit, a form will appear with the pre-filled data of the game, allowing us to change what we need.
+
+![image](./screenshots/Screenshot_21.jpg)
+
+### Delete Videogame from the Database
+---
+![image](./screenshots/Screenshot_22.jpg)
 
 ## Other Languages
 

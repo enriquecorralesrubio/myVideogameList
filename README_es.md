@@ -116,9 +116,33 @@ Se abrirá un formulario en el que podrás cambiar lo que desees y actualizarlo 
 
 ## Panel de administración
 ---
-Si nos logueamos como un administrador, veremos una página distinta. La lista de juegos sigue apareciendo, pero ahora podremos añadir, editar y eliminar juegos de la BD, además de añadir o eliminar géneros y plataformas.
+Si nos logueamos como un administrador, veremos una página distinta. La lista de juegos sigue apareciendo, pero ahora podremos añadir, editar y eliminar juegos de la BD, además de añadir o eliminar géneros y plataformas. Todo ello con sus respectivos formularios.
 
-Simplemente tenemos que rellenar los distintos formularios según sea el caso.
+![image](./screenshots/Screenshot_17.jpg)
+
+### Añadir videojuego a la base de datos
+---
+
+![image](./screenshots/Screenshot_18.jpg)
+
+### Añadir o eliminar género de la base de datos
+---
+![image](./screenshots/Screenshot_19.jpg)
+
+### Añadir o eliminar plataforma de la base de datos
+---
+![image](./screenshots/Screenshot_20.jpg)
+
+### Editar videojuego de la base de datos
+---
+
+Al seleccionar un videojuego a editar, saldrá el formulario con los datos ya rellenados de dichos videojuego, podemos cambiar lo que necesitemos.
+
+![image](./screenshots/Screenshot_21.jpg)
+
+### Eliminar videojuego de la base de datos
+---
+![image](./screenshots/Screenshot_22.jpg)
 
 ## Otros lenguajes
 
